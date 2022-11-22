@@ -24,7 +24,9 @@ int print_int(va_list args)
 		my_arr[i] = (numb % 10);
 		numb = numb / 10;
 		if (numb == 0)
+		{
 			break;
+		}
 		else
 			i++;
 	}
