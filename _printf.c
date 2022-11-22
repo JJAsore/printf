@@ -1,7 +1,4 @@
-#include <stdarg.h>
-#include <unistd.h>
 #include "main.h"
-#include <stdio.h>
 
 /**
   * _printf - prints a string in desired formats
@@ -19,6 +16,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
+	int (*f)(va_list);
 
 	/*prevent null pointer*/
 	if (format == NULL)
@@ -37,7 +35,27 @@ int _printf(const char *format, ...)
 
 		if (format[i] == '%')
 		{
-			//expression
+			f = specifier(&format[i + 1]);
+			if (f != NULL)
+			{
+				value = f(args);
+				count = count + value;
+				i += 2;
+				continue;
+			}
+			if (format[i + 1] == '\0')
+			{
+				break;
+			}
+			if (format[i + 1] != '\0')
+			{
+				value = write(1, &format[i + 1], 1);
+				count = count + value;
+				i += 2;
+				continue;
+			}
+
+
 		}
 	}
 
