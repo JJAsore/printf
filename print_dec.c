@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_dec - prints a given integer from variadic parameters to base 10
+ * print_dec - prints a given integer fromm variadic parameters to base 10
  * @args: variadic parameter
  *
  * Return: number of characters printed on Success

@@ -4,7 +4,7 @@
  * print_int - prints a given integer from variadic parameters
  * @args: variadic parameter
  *
- * Return: number of characters printed on Success
+ * Return:number of characters printed on Success
  */
 
 int print_int(va_list args)
