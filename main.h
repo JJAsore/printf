@@ -1,20 +1,18 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
-/*default header files*/
-
-#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-int (*specifier(const char *format))(va_list);
+int (*check_specifier(const char*))(va_list);
 
 /**
  * struct func - struct for specifier to printer
  * @t: character to compare
- * @f: function that handles printing
+ * @f: function to handle printing
  */
 typedef struct func
 {
@@ -22,11 +20,10 @@ typedef struct func
 	int (*f)(va_list);
 } func_t;
 
-/*specifier functions*/
-int print_char(va_list args);
-int print_string(va_list args);
-int print_percent(va_list args);
-int print_dec(va_list args);
-int print_int(va_list args);
+int print_char(va_list);
+int print_str(va_list);
+int print_cent(va_list);
+int print_int(va_list);
+int print_dec(va_list);
 
 #endif

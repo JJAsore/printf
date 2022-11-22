@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_char - print a character
+ * print_char - prints a character to stdout
  * @args: variadic parameter
  *
- * Return: number od characters printed.
+ * Return: number of characters printed
  */
 
 int print_char(va_list args)
@@ -17,5 +17,6 @@ int print_char(va_list args)
 		count = write(1, &c, 1);
 		return (count);
 	}
+
 	return (0);
 }

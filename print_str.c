@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * print_string - print string to stdout
+ * print_str - prints a variadic string each per time to stdout
  * @args: variadic parameter
  *
- * Return: number of characters printed.
+ * Return: number of characters printed on Success
+ * upon failure -1
  */
 
-int print_string(va_list args)
+int print_str(va_list args)
 {
 	int i;
 	int count = 0;
@@ -24,4 +25,4 @@ int print_string(va_list args)
 	}
 
 	return (count);
-}
+}	
