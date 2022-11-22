@@ -17,18 +17,19 @@ int _printf(const char *format, ...)
 	int count = 0;
 	int value = 0;
 	va_list args;
+
 	va_start(args, format);
 
 	/*prevent null pointer*/
 	if (format == NULL)
 		return (-1);
-	 
+
 	/*print rach character of a string*/
 	while (format[i])
 	{
 		if (format[i] != '%')
 		{
-		value = write(1,&format[i],1);
+		value = write(1, &format[i], 1);
 		count = count + value;
 		i++;
 		continue;
