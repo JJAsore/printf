@@ -32,15 +32,12 @@ int print_dec(va_list args)
 	}
 
 	/*Write the contents of the array to stdout*/
-<<<<<<< HEAD
-	{	
-=======
-	for(i; i >= 0; i--)
+
 	{
->>>>>>> dd7863b34bdc5b96c36a97e30101c51bc62aee0a
 		x[0] = ('0' + my_arr[i]); /*Convert int to char*/
 		count += write(1, x, 1);
 	}
+	
 
 	return (count);
 }
