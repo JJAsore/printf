@@ -4,7 +4,7 @@
  * print_char - prints a character to stdout
  * @args: variadic parameter
  *
- * Return: number of characters printed
+ * Return:number of characters printed
  */
 
 int print_char(va_list args)

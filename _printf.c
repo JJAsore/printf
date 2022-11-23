@@ -8,7 +8,7 @@
  * @format: string to print (char *)
  * @...: variadic parameters (unknown)
  *
- * Return: number of characters printed
+ * Return:number of characters printed
  */
 
 int _printf(const char *format, ...)
